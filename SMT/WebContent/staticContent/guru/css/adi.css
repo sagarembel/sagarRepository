@@ -1,0 +1,81 @@
+body { 	
+	/* background-image :url("cloth.jpg"); */
+	background-position: fill;
+	background-attachment: fixed;
+	color: Navy; 
+	font-size: 15px;
+	font-family: Tahoma;
+	}
+	
+.date-field {
+	text-align: right;
+	
+}
+.form-group {
+	padding-bottom: 1cm;
+	padding-top: 50px;
+}
+
+.form-group-1 {
+	padding: 30px;
+	text-align: center;
+	font-family: "Times New Roman";
+	font-size: 20px;
+	padding-top: 0px;
+}
+	
+.rTable {
+   	display: table;
+	width: 100%;
+	border-collapse: collapse;
+	padding: 20px;
+
+}
+.rTableRow {
+   	display: table-row;
+}
+
+.rTableLabel{
+	font-size: 20px;
+	text-align: right;
+}
+
+.rTableHeading {
+	display: table-header-group;
+	background-color: #ddd;
+}
+
+.rTableCell, .rTableHead {
+   	display: table-cell;
+   	padding: 3px 10px;
+   	border: 1px solid #999999;
+   	height: 77px;
+   	font-size: medium;
+}
+
+.rTableHeading {
+   	display: table-header-group;
+   	background-color: #ddd;
+   	font-weight: bold;
+}
+	
+.rTableBody {
+   	display: table-row-group;
+}
+	
+.wrapper{
+	text-align: center;
+	padding-top: 50px;
+	font-family: "Times New Roman";
+	font-size: 15px;
+}
+
+.button {
+	position: absolute;
+}
+		
+.footer {
+	text-align: center;
+	padding-top: 55px;
+}
+

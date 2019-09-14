@@ -1,0 +1,45 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.smt.hibernate.TempItemDetail" table="tempdata">
+
+		<id name="pk_temp_id" type="java.lang.Long" column="pk_temp_id">
+			<generator class="increment" />
+		</id>
+
+		<property name="item_id" type="java.lang.Long" column="ItemId" />
+
+		<property name="cat_id" type="java.lang.Long" column="CatId" />
+
+		<property name="barcodeNo" type="java.lang.Long" column="BarcodeNo" />
+
+		<property name="quantity" type="java.lang.Long" column="Quantity" />
+
+		<property name="categoryName" type="java.lang.String" column="CatName"
+			length="255" />
+
+		<property name="itemName" type="java.lang.String" column="ItemName"
+			length="255" />
+
+		<property name="carNo" type="java.lang.String" column="CarNo"
+			length="255" />
+
+		<property name="hsnSacNo" type="java.lang.String" column="HsnSacNo" />
+
+		<property name="salePrice" type="java.lang.Double" column="unitPrice" />
+
+		<property name="vat" type="java.lang.Double" column="Gst" />
+
+		<property name="igst" type="java.lang.Double" column="Igst" />
+
+		<property name="taxAmount" type="java.lang.Double" column="TaxAmount" />
+
+		<property name="activeYN" type="java.lang.Character" column="ActiveYN" />
+
+		<property name="current_date" type="java.sql.Date" column="CurrentDate"
+			length="255" />
+
+	</class>
+</hibernate-mapping> 

@@ -1,0 +1,24 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+
+	<class name="com.smt.hibernate.CarEntry" table="CarEntry">
+
+		<id name="pkCarEntryId" type="java.lang.Long" column="pkCarEntryId">
+			<generator class="increment" />
+		</id>
+
+		<property name="carNo" type="java.lang.String" column="Car_No" />
+
+		<property name="dateid" type="java.sql.Date" column="OnDate" />
+
+		<property name="ownerName" type="java.lang.String" column="Owner_Name" />
+
+		<property name="contactNo" type="java.lang.Long" column="Contact_No" />
+
+		<property name="activeYN" type="java.lang.Character" column="ActiveYN" />
+
+	</class>
+</hibernate-mapping> 

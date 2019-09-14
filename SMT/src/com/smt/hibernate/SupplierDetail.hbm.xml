@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+	<class name="com.smt.hibernate.SupplierDetail"
+		table="supplier_details">
+
+		<id name="supplierId" type="java.lang.Long" column="supplier_id">
+			<generator class="increment" />
+		</id>
+
+
+		<property name="address" type="java.lang.String"
+			column="address" not-null="false" length="255" />
+
+		<property name="city" type="java.lang.String" column="city"
+			not-null="false" length="255" />
+		<property name="contactPerson" type="java.lang.String"
+			column="contact_person" not-null="false" length="255" />
+
+		<property name="panNo" type="java.lang.String"
+			column="pan_no" not-null="false" length="19" />
+		<property name="email" type="java.lang.String" column="email"
+			not-null="false" length="255" />
+
+		<property name="pin" type="java.lang.Long" column="pin"
+			not-null="false" length="19" />
+
+		<property name="supplierName" type="java.lang.String"
+			column="supplier_name" not-null="false" length="255" />
+
+		<property name="mobileno" type="java.lang.Long"
+			column="mobileNo" not-null="false" length="19" />
+
+		<property name="suppCode" type="java.lang.String"
+			column="SuppCode" not-null="false" length="20" />
+			
+		<property name="taxType" type="java.lang.String"
+			column="taxType" length="255" />
+
+	</class>
+</hibernate-mapping>

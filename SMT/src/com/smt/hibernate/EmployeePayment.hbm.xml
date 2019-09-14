@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+	<class name="com.smt.hibernate.EmployeePaymentBean" table="employee_payment"
+		schema="fabric">
+
+		<id name="pkEmployeePaymentId" type="java.lang.Long" column="pk_employee_payment_id"
+			length="20">
+			<generator class="increment" />
+		</id>
+
+		<property name="fk_employee_id" type="java.lang.Long" column="fk_employee_id"
+			length="20">
+		</property>
+
+		<property name="insertDate" type="java.sql.Date" column="insert_date" />
+
+		<property name="credit" type="java.lang.Double" column="payment"
+			length="20">
+		</property>
+
+		<property name="personName" type="java.lang.String" column="person_name"
+			length="128">
+		</property>
+
+		<property name="paymentType" type="java.lang.String" column="paymentType"
+			length="128">
+		</property>
+
+		<property name="reason" type="java.lang.String" column="reason"
+			length="128">
+		</property>
+
+		<property name="chequeNum" type="java.lang.String" column="cheque_num"
+			length="20" />
+
+		<property name="cardNum" type="java.lang.Long" column="card_num"
+			length="20" />
+
+		<property name="accNum" type="java.lang.Long" column="acc_num"
+			length="20" />
+
+		<property name="paymentMode" type="java.lang.String" column="payment_mode"
+			length="20" />
+
+		<property name="nameOnCheck" type="java.lang.String" column="name_on_check"
+			length="128" />
+
+		<property name="bankName" type="java.lang.String" column="bank_name"
+			length="128" />
+
+	</class>
+</hibernate-mapping>

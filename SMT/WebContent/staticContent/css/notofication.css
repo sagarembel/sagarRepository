@@ -1,0 +1,166 @@
+/*  html{
+width:100%;
+height:100%;
+background:radial-gradient(center,#fff 1%,#33aed5 100%);}
+input{opacity:0;}
+
+
+
+label{
+width:80px;
+height:20px;
+padding:5px;
+color:#fff;
+border-radius:5px;	
+	} 
+#popup{
+	margin-top:-800px; 
+	margin-right:20px;
+	transition:all 1s ease, opacity 1s ease .5s;
+	opacity:0;
+	float:right;
+	width:200px;
+	height:60px;
+	border-bottom:1px solid #ccc;
+	border-radius:4px;
+	background:linear-gradient(top, rgba(247,247,247,1) 0%,rgba(229,229,229,1) 100%);
+	line-height:0;
+	box-shadow:0px 3px 5px rgba(0,0,0,.2);
+	position:relative;
+	z-index:0;
+}
+#popup p {
+margin:-30px 60px;
+display:block;
+width:200px;
+height:80px;
+color:#999;
+text-shadow:0px -1px 1px #fff,0px 1px 1px #fff;}
+#popup:before{
+content:'';
+display:block;
+width:100%;
+margin:8px;
+height:40%;
+background:url('http://lab.web-gate.fr/images/skype.png')no-repeat bottom;
+background-position:1% 1%;
+background-size:20%;
+padding:10px;}
+#popup:after{
+	z-index:2;
+	position:absolute;
+ 	margin-top:-80px; 
+	content:'';
+	display:block;
+	width:200px;
+	height:60px;
+	background-image:linear-gradient(315deg,rgba(255,255,255,.2)49%,rgba(255,255,255,.0)50%,rgba(255,255,255,.0));
+border-radius:10px;}
+#pop:checked ~ label #popup{
+	margin-top:-750px;
+	opacity:1;}
+
+
+
+.btn {
+	position:fixed;
+	margin-left:100px; 
+	height:40px;
+	width: 200px;
+	font-family:monospace;
+	font-size:x-large;
+ 	display: inline-block;
+  	padding: 4px 10px 4px;
+  	margin-bottom: 0;
+	margin:240px 45%; 
+  	font-size: 13px;
+  	line-height: 18px;
+  	color: white;
+ 	text-align: center;
+  	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.75);
+  	vertical-align: middle;
+  	cursor: pointer;
+  	background-color: red;
+  	background-image: linear-gradient(top, #33aed5, #559abb);
+  	background-repeat: repeat-x;
+  	border: 1px solid #cccccc;
+  	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  	border:0;
+  	border-bottom:3px solid #696969;
+  	-webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+  	filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+  	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.btn:active {
+  color: green;
+  text-decoration: none;
+  background-color: red;
+  Buttons in IE7 don't get borders, so darken on hover
+   transition: all 0.1s linear;
+	border-bottom:1px solid #696969;
+	margin: 242px 45%;
+}
+
+
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+} 
+
+
+
+ */
+ 
+ 
+ table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+} 
+/*  .modal  {
+      display: block;
+    padding-right: 0px;
+    background-color: rgba(4, 4, 4, 0.8); 
+    }
+   
+    .modal-dialog {
+            top: 20%;
+                width: 100%;
+    position: absolute;
+        }
+        .modal-content {
+                border-radius: 0px;
+                border: none;
+    top: 40%;
+            }
+            .modal-body {
+                    background-color: #0f8845;
+    color: white;
+                }
+                */
+                
+                
+                .modal-body .form-horizontal .col-sm-2,
+.modal-body .form-horizontal .col-sm-10 {
+    width: 100%
+}
+
+.modal-body .form-horizontal .control-label {
+    text-align: left;
+}
+.modal-body .form-horizontal .col-sm-offset-2 {
+    margin-left: 15px;
+}
+
+.modal-content {
+    background-color: #eeeeee;
+}
+
+.btn-custom {
+    color: #428bca;
+}

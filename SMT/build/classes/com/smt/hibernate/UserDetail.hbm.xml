@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+	<class name="com.smt.hibernate.UserDetail" table="user_details">
+
+		<id name="pkUserId" type="java.lang.Long" column="pk_user_id">
+			<generator class="increment" />
+		</id>
+
+		<property name="typeId" type="java.lang.String" column="typeId"	length="255" />
+		<property name="userName" type="java.lang.String" column="userName"	length="255" />
+		<property name="password" type="java.lang.String" column="password"	length="255" />
+		<property name="repassword" type="java.lang.String" column="repassword"	length="255" />
+
+	</class>
+</hibernate-mapping>

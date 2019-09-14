@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+	<class name="com.smt.hibernate.CashBook" table="cash_book2">
+
+		<id name="pkCashBookEntry" type="java.lang.Long" column="pk_cashbook_id">
+			<generator class="increment" />
+		</id>
+
+		<property name="payToId" type="java.lang.String" column="to_pay"
+			not-null="true" length="255" />
+
+		<property name="toPayNameId" type="java.lang.String" column="Name"
+			not-null="true" length="255" />
+
+		<property name="paymentDate" type="java.sql.Date" column="paymentDate"
+			not-null="false" />
+
+		<property name="paymentTypeId" type="java.lang.String"
+			column="paymentType" not-null="true" length="255" />
+
+		<property name="paymebtById" type="java.lang.String" column="paymentBy"
+			not-null="true" length="255" />
+
+
+		<property name="chequeNoId" type="java.lang.Long" column="chequeNo"
+			not-null="true" length="50" />
+
+		<property name="chequeDateId" type="java.sql.Date" column="chequeDate"
+			not-null="false" />
+
+		<property name="cardNoId" type="java.lang.Long" column="cardNo"
+			not-null="true" length="50" />
+
+		<property name="neftAccNoId" type="java.lang.Long" column="neftAcNo"
+			not-null="true" length="50" />
+
+		<property name="paymentAmountId" type="java.lang.Double"
+			column="amount" length="50" />
+
+		<property name="paymentReasonId" type="java.lang.String"
+			column="reason" not-null="true" length="255" />
+
+	</class>
+</hibernate-mapping>

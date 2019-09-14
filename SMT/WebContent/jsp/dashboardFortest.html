@@ -1,0 +1,1037 @@
+<html>
+<head>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="/SMT/staticContent/y_js/jquery-1.11.3.min.js"></script>
+<script src="/SMT/staticContent/y_js/jquery.mobile-1.4.5.min.js"></script>
+
+
+<link rel="stylesheet"
+	href="/SMT/staticContent/y_css/3.3.7_bootstrap.min.css">
+<script src="/SMT/staticContent/y_js/3.1.1_jquery.min.js"></script>
+<script src="/SMT/staticContent/y_js/3.3.7_bootstrap.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="/SMT/staticContent/y_css/3.3.7_bootstraps.min.css">
+
+<!-- jQuery library -->
+<script src="/SMT/staticContent/y_js/3.1.1_jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="/SMT/staticContent/3.3.7_bootstrap.min.js"></script>
+
+<!-- fa fa class -->
+<link rel="stylesheet"
+	href="/SMT/staticContent/y_css/fonts-awesome.min.css">
+
+
+<style>
+.shadow:hover {<!--
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
+	font-family: 'Lobster', cursive;
+	font-shadow: 0 0 3px;
+	font-size: 30px;
+	-->
+}
+
+a {
+	font-size: 30px;
+}
+
+.font-shadow {
+	color: #bdb7b7;
+	text-shadow: 1px 1px 2px black, 0 0 25px red, 0 0 5px darkred;
+	font-weight: bold;
+}
+
+.font-shadow:hover {
+	color: #bdb7b7;
+	text-shadow: 1px 1px 2px black, 0 0 25px red, 0 0 5px darkred;
+	font-weight: bold;
+}
+</style>
+
+
+
+<style>
+.dummy {
+	margin-top: 100%;
+}
+
+.thumbnail {
+	background-color: #BDB76B;
+	position: absolute;
+	top: 15px;
+	bottom: 0;
+	left: 15px;
+	right: 15;
+	text-align: center;
+	padding-top: calc(50% - 30px);
+}
+
+.thumbnail:hover {
+	background-color: #dda488;
+	position: absolute;
+	top: 15px;
+	bottom: 0;
+	left: 15px;
+	right: 15;
+	text-align: center;
+	padding-top: calc(50% - 30px);
+}
+</style>
+
+
+</head>
+<div style="background-image: url(6.jpg)">
+	<body>
+		<div class="container" style="background-color:;">
+			<div class="row">
+				<div class="col-md-3 col-sm-4 col-xs-6 shadow">
+					<div class="dummy"></div>
+					<a href="#" class="thumbnail purple font-shadow"
+						data-transition="pop"> <i class="fa fa-home"> </i> Home
+					</a>
+
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-6 shadow pop2">
+					<div class="dummy"></div>
+					<a href="#popupNested2" data-rel="popup"
+						class="thumbnail purple font-shadow autoview"
+						data-transition="pop"> <i class="fa fa-sitemap"></i> Master
+					</a>
+				</div>
+
+
+				<!------------------------------------------------------------------------------------------------->
+
+
+
+				<div data-role="popup" id="popupNested2" data-theme="none">
+					<div data-role="collapsibleset" data-theme="b"
+						data-content-theme="a" data-collapsed-icon="arrow-r"
+						data-expanded-icon="arrow-d" style="margin: 0; width: 250px;">
+						<div data-role="collapsible" data-inset="false">
+							<h2>Category</h2>
+							<ul data-role="listview">
+								<li><a
+									href="http://localhost:8080/SMT/jsp/y_category_subcategory.jsp"
+									data-rel="dialog">Add Category</a></li>
+								<li><a href="#" data-rel="dialog">Category List</a></li>
+							</ul>
+						</div>
+						<!-- /collapsible -->
+						<div data-role="collapsible" data-inset="false">
+							<h2>Add Products</h2>
+							<ul data-role="listview">
+								<li><a href="#" data-rel="dialog">Product Details</a></li>
+								<li><a href="#" data-rel="dialog">Item List</a></li>
+								<li><a href="#" data-rel="dialog">Special Offer</a></li>
+								<li><a href="#" data-rel="dialog">Add Shop</a></li>
+							</ul>
+						</div>
+						<!-- /collapsible -->
+						<div data-role="collapsible" data-inset="false">
+							<h2>Supplier</h2>
+							<ul data-role="listview">
+								<li><a href="#" data-rel="dialog">Supplier Details</a></li>
+								<li><a href="#" data-rel="dialog">Supplier List</a></li>
+								<li><a href="#" data-rel="dialog">Edit Supplier</a></li>
+								<li><a href="#" data-rel="dialog">Broker Details</a></li>
+								<li><a href="#" data-rel="dialog">Broker List</a></li>
+							</ul>
+						</div>
+						<!-- /collapsible -->
+						<div data-role="collapsible" data-inset="false">
+							<h2>Stock Movement</h2>
+							<ul data-role="listview">
+								<li><a href="#" data-rel="dialog">Authority Slip</a></li>
+								<li><a href="#" data-rel="dialog">Authority Slip Shop
+										To Godown</a></li>
+								<li><a href="#" data-rel="dialog">Fast Moving Item</a></li>
+							</ul>
+						</div>
+						<!-- /collapsible -->
+					</div>
+					<!-- /collapsible set -->
+				</div>
+				<!-- /popup -->
+				<!-------------------------------------------------------------------------------------------------->
+			</div>
+		</div>
+
+	</body>
+
+</div>
+</html>
+
+<%-- <%@page import="com.smt.hibernate.UserDetail"%> <%@page
+import="org.hibernate.Session"%> <%@page
+import="com.smt.utility.HibernateUtility"%> <% String type1= ""; String
+name1 = ""; if (session != null) { if (session.getAttribute("user") !=
+null) { name1 = (String) session.getAttribute("user"); HibernateUtility
+hbu1=HibernateUtility.getInstance(); Session
+session2=hbu1.getHibernateSession(); org.hibernate.Query query1 =
+session2.createQuery("from UserDetail where userName =:usr");
+query1.setParameter("usr", name1); UserDetail userDetail1 = (UserDetail)
+query1.uniqueResult(); type1 = userDetail1.getTypeId(); } else {
+
+response.sendRedirect("/SMT/jsp/login.jsp"); out.println("Please Login
+"); } } else { response.sendRedirect("/SMT/jsp/login.jsp");
+out.println("Please Login "); } %> <% String
+contextPath=request.getContextPath(); %> <% String path="";
+if(isHome)path="jsp\\"; %> <%if(isHome){%>
+<link rel="stylesheet" href="staticContent/css/style.css" />
+<%}else{ %>
+<link rel="stylesheet" href="../staticContent/css/style.css" />
+<% } %> <%if(isHome){%>
+<link rel="stylesheet" href="staticContent/css/style.css" />
+<%}else{ %>
+<link rel="stylesheet" href="../staticContent/css/style.css" />
+<% } %> <%if(isHome){%>
+<link rel="stylesheet" href="staticContent/css/style.css" />
+<%}else{ %>
+<link rel="stylesheet" href="../staticContent/css/style.css" />
+<% } %>
+
+<html>
+<head>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script
+	src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<%if(isHome){%>
+<link rel="stylesheet" href="staticContent/y_css/style.css" />
+<%}else{ %>
+<link rel="stylesheet" href="../staticContent/y_css/style.css" />
+<% } %>
+<script src="/SMT/staticContent/y_js/bootstrap.min.js"></script>
+
+
+<%if(isHome){%>
+<link rel="stylesheet" href="staticContent/y_css/style.css" />
+<%}else{ %>
+<link rel="stylesheet" href="../staticContent/y_css/style.css" />
+<% } %>
+
+
+
+<style>
+.shadow:hover {<!--
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
+	font-family: 'Lobster', cursive;
+	font-shadow: 0 0 3px;
+	font-size: 30px;
+	-->
+}
+
+a {
+	font-size: 30px;
+}
+
+.font-shadow {
+	color: #bdb7b7;
+	text-shadow: 1px 1px 2px black, 0 0 25px red, 0 0 5px darkred;
+	font-weight: bold;
+}
+
+.font-shadow:hover {
+	color: #bdb7b7;
+	text-shadow: 1px 1px 2px black, 0 0 25px red, 0 0 5px darkred;
+	font-weight: bold;
+}
+</style>
+
+
+
+<style>
+.dummy {
+	margin-top: 100%;
+}
+
+.thumbnail {
+	background-color: #BDB76B;
+	position: absolute;
+	top: 15px;
+	bottom: 0;
+	left: 15px;
+	right: 15;
+	text-align: center;
+	padding-top: calc(50% - 30px);
+}
+
+.thumbnail:hover {
+	background-color: #dda488;
+	position: absolute;
+	top: 15px;
+	bottom: 0;
+	left: 15px;
+	right: 15;
+	text-align: center;
+	padding-top: calc(50% - 30px);
+}
+</style>
+
+
+</head>
+<body
+	style="background-image: url('/SMT/WebContent/staticContent/images/6.jpg');">
+
+	<div class="container" style="background-color:;">
+		<div class="row">
+			<div class="col-md-3 col-sm-4 col-xs-6 shadow">
+				<div class="dummy"></div>
+				<a href="#" class="thumbnail purple font-shadow"
+					data-transition="pop">Home</a>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-6 shadow pop2">
+				<div class="dummy"></div>
+				<a href="#popupNested2" data-rel="popup"
+					class="thumbnail purple font-shadow autoview" data-transition="pop">Master</a>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-6 shadow">
+				<div class="dummy"></div>
+				<a href="#popupNested3" data-rel="popup"
+					class="thumbnail purple font-shadow" data-transition="pop">Billing</a>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-6 shadow">
+				<div class="dummy"></div>
+				<a href="#popupNested4" data-rel="popup"
+					class="thumbnail purple font-shadow" data-transition="pop">Purchase</a>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-6 shadow">
+				<div class="dummy"></div>
+				<a href="#popupNested5" data-rel="popup"
+					class="thumbnail purple font-shadow" data-transition="pop">HR</a>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-6 shadow">
+				<div class="dummy"></div>
+				<a href="#popupNested6" data-rel="popup"
+					class="thumbnail purple font-shadow" data-transition="pop">Account</a>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-6 shadow">
+				<div class="dummy"></div>
+				<a href="#popupNested7" data-rel="popup"
+					class="thumbnail purple font-shadow" data-transition="pop">Stock</a>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-6 shadow">
+				<div class="dummy"></div>
+				<a href="#popupNested8" data-rel="popup"
+					class="thumbnail purple font-shadow" data-transition="pop">Reports</a>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-6 shadow">
+				<div class="dummy"></div>
+				<a href="#popupNested9" data-rel="popup"
+					class="thumbnail purple font-shadow" data-transition="pop">CS
+					Desk</a>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-6 shadow">
+				<div class="dummy"></div>
+				<a href="#popupNested10" data-rel="popup"
+					class="thumbnail purple font-shadow" data-transition="pop">Notifications</a>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-6 shadow">
+				<div class="dummy"></div>
+				<a href="#popupNested11" data-rel="popup"
+					class="thumbnail purple font-shadow" data-transition="pop">Create
+					User</a>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-6 shadow">
+				<div class="dummy"></div>
+				<a href="#" class="thumbnail purple font-shadow"
+					data-transition="pop">Logout</a>
+			</div>
+
+
+		</div>
+	</div>
+
+	<!------------------------------------------------------------------------------------------------->
+
+	<div data-role="popup" id="popupNested2" data-theme="none">
+		<div data-role="collapsibleset" data-theme="b" data-content-theme="a"
+			data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d"
+			style="margin: 0; width: 250px;">
+			<div data-role="collapsible" data-inset="false">
+				<h2>Category</h2>
+				<ul>
+					<li><a
+						href="http://localhost:8080/SMT/jsp/y_category_subcategory.jsp">Add
+							Category</a></li>
+					<li><a href="#" data-rel="dialog">Category List</a></li>
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>Add Products</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Product Details</a></li>
+					<li><a href="#" data-rel="dialog">Item List</a></li>
+					<li><a href="#" data-rel="dialog">Special Offer</a></li>
+					<li><a href="#" data-rel="dialog">Add Shop</a></li>
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>Supplier</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Supplier Details</a></li>
+					<li><a href="#" data-rel="dialog">Supplier List</a></li>
+					<li><a href="#" data-rel="dialog">Edit Supplier</a></li>
+					<li><a href="#" data-rel="dialog">Broker Details</a></li>
+					<li><a href="#" data-rel="dialog">Broker List</a></li>
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>Stock Movement</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Authority Slip</a></li>
+					<li><a href="#" data-rel="dialog">Authority Slip Shop To
+							Godown</a></li>
+					<li><a href="#" data-rel="dialog">Fast Moving Item</a></li>
+				</ul>
+			</div>
+			<!-- /collapsible -->
+		</div>
+		<!-- /collapsible set -->
+	</div>
+	<!-- /popup -->
+	<!-------------------------------------------------------------------------------------------------->
+	<div data-role="popup" id="popupNested3" data-theme="none">
+		<div data-role="collapsibleset" data-theme="b" data-content-theme="a"
+			data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d"
+			style="margin: 0; width: 250px;">
+			<div data-role="collapsible" data-inset="false">
+				<h2>Customer Bill</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Chicken</a></li>
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>Customer Bill History</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Cat</a></li>
+
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>All Creadit Customer Details</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Fish</a></li>
+
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>Sale Return</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Lion</a></li>
+
+				</ul>
+			</div>
+			<!-- /collapsible -->
+		</div>
+		<!-- /collapsible set -->
+	</div>
+	<!-- /popup -->
+	<!---------------------------------------------------------------------->
+	<div data-role="popup" id="popupNested4" data-theme="none">
+		<div data-role="collapsibleset" data-theme="b" data-content-theme="a"
+			data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d"
+			style="margin: 0; width: 250px;">
+			<div data-role="collapsible" data-inset="false">
+				<h2>Purchase Order</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Chicken</a></li>
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>PO Goods Received</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Cat</a></li>
+
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>PO Goods Received List</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Fish</a></li>
+
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>Previous Goods Received</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Lion</a></li>
+
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>Perchase Return</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Lion</a></li>
+
+				</ul>
+			</div>
+			<div data-role="collapsible" data-inset="false">
+				<h2>Parcel Entry</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Lion</a></li>
+
+				</ul>
+			</div>
+		</div>
+		<!-- /collapsible set -->
+	</div>
+	<!-- /popup -->
+	<!---------------------------------------------------------------------->
+	<div data-role="popup" id="popupNested5" data-theme="none">
+		<div data-role="collapsibleset" data-theme="b" data-content-theme="a"
+			data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d"
+			style="margin: 0; width: 250px;">
+			<div data-role="collapsible" data-inset="false">
+				<h2>HR</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Employee Details</a></li>
+					<li><a href="#" data-rel="dialog">Employee List</a></li>
+					<li><a href="#" data-rel="dialog">Employee Attendance</a></li>
+					<li><a href="#" data-rel="dialog">Employee Attendance1</a></li>
+
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>Leave</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Cat</a></li>
+
+				</ul>
+			</div>
+			<!-- /collapsible -->
+
+		</div>
+		<!-- /collapsible set -->
+	</div>
+	<!---------------------------------------------------------------------->
+	<div data-role="popup" id="popupNested5" data-theme="none">
+		<div data-role="collapsibleset" data-theme="b" data-content-theme="a"
+			data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d"
+			style="margin: 0; width: 250px;">
+			<div data-role="collapsible" data-inset="false">
+				<h2>Employee Leave</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Chicken</a></li>
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>PO Goods Received</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Cat</a></li>
+
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>PO Goods Received List</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Fish</a></li>
+
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>Previous Goods Received</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Lion</a></li>
+
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>Perchase Return</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Lion</a></li>
+
+				</ul>
+			</div>
+			<div data-role="collapsible" data-inset="false">
+				<h2>Parcel Entry</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Lion</a></li>
+
+				</ul>
+			</div>
+		</div>
+		<!-- /collapsible set -->
+	</div>
+	<!---------------------------------------------------------------------->
+	<div data-role="popup" id="popupNested4" data-theme="none">
+		<div data-role="collapsibleset" data-theme="b" data-content-theme="a"
+			data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d"
+			style="margin: 0; width: 250px;">
+			<div data-role="collapsible" data-inset="false">
+				<h2>Purchase Order</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Chicken</a></li>
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>PO Goods Received</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Cat</a></li>
+
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>PO Goods Received List</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Fish</a></li>
+
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>Previous Goods Received</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Lion</a></li>
+
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>Perchase Return</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Lion</a></li>
+
+				</ul>
+			</div>
+			<div data-role="collapsible" data-inset="false">
+				<h2>Parcel Entry</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Lion</a></li>
+
+				</ul>
+			</div>
+		</div>
+		<!-- /collapsible set -->
+	</div>
+
+	<!---------------------------------------------------------------------->
+	<div data-role="popup" id="popupNested6" data-theme="none">
+		<div data-role="collapsibleset" data-theme="b" data-content-theme="a"
+			data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d"
+			style="margin: 0; width: 250px;">
+			<div data-role="collapsible" data-inset="false">
+				<h2>Supplier Account Details</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Supplier Account Details</a></li>
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>Add Other Account</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Cat</a></li>
+
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>Cash Book</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Cash Book Supplier</a></li>
+					<li><a href="#" data-rel="dialog">Cash Book Salesman</a></li>
+					<li><a href="#" data-rel="dialog">Cash Book Credit
+							Customer</a></li>
+					<li><a href="#" data-rel="dialog">Cash Book Other</a></li>
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>Creadit Account Report</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Other Account Detail
+							Report Between Two Dates</a></li>
+					<li><a href="#" data-rel="dialog">Other Account Report</a></li>
+					<li><a href="#" data-rel="dialog">Credit Customer Payment
+							Report</a></li>
+					<li><a href="#" data-rel="dialog">Billwise Account Details</a></li>
+
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>Supplier Account Report</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Supplier Account List</a></li>
+					<li><a href="#" data-rel="dialog">Supplier Account Report
+							Between Two Dates</a></li>
+					<li><a href="#" data-rel="dialog">Other Account Detail
+							Report Between Two Days</a></li>
+
+				</ul>
+			</div>
+			<div data-role="collapsible" data-inset="false">
+				<h2>Employee Account Report</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Employee Account Details</a></li>
+					<li><a href="#" data-rel="dialog">Employee Account Detail
+							Report</a></li>
+
+				</ul>
+			</div>
+			<div data-role="collapsible" data-inset="false">
+				<h2>Tax</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Employee Account Details</a></li>
+
+
+				</ul>
+			</div>
+
+		</div>
+		<!-- /collapsible set -->
+	</div>
+	<!---------------------------------------------------------------------->
+	<div data-role="popup" id="popupNested7" data-theme="none">
+		<div data-role="collapsibleset" data-theme="b" data-content-theme="a"
+			data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d"
+			style="margin: 0; width: 250px;">
+			<div data-role="collapsible" data-inset="false">
+				<h2>Current Stock</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Chicken</a></li>
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>Categorywise Stock</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Cat</a></li>
+
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>Supplierwise Stock</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Fish</a></li>
+
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>Shopwise Stock</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Lion</a></li>
+
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>Age Wise Stock</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Lion</a></li>
+
+				</ul>
+			</div>
+			<div data-role="collapsible" data-inset="false">
+				<h2>Item In Shop</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Lion</a></li>
+
+				</ul>
+			</div>
+			<div data-role="collapsible" data-inset="false">
+				<h2>Item In Godown</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Lion</a></li>
+
+				</ul>
+			</div>
+		</div>
+		<!-- /collapsible set -->
+	</div>
+	<!---------------------------------------------------------------------->
+	<div data-role="popup" id="popupNested8" data-theme="none">
+		<div data-role="collapsibleset" data-theme="b" data-content-theme="a"
+			data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d"
+			style="margin: 0; width: 250px;">
+			<div data-role="collapsible" data-inset="false">
+				<h2>Sale Graph Report</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Daily Sale Graph</a></li>
+					<li><a href="#" data-rel="dialog">Weekly Sale Report</a></li>
+					<li><a href="#" data-rel="dialog">Monthly Sale Graph</a></li>
+					<li><a href="#" data-rel="dialog">Daily Shop Sale Graph</a></li>
+					<li><a href="#" data-rel="dialog">Weekly Sale Graph</a></li>
+					<li><a href="#" data-rel="dialog">Monthly Sale Graph</a></li>
+					<li><a href="#" data-rel="dialog">Yearly Sale Graph</a></li>
+					<li><a href="#" data-rel="dialog">Payment Due Date</a></li>
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>Sale Report</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Shop related Reports</a></li>
+					<li><a href="#" data-rel="dialog">All Sale Reports</a></li>
+
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>Purchase Report</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Purchase Report Between
+							Two Days</a></li>
+					<li><a href="#" data-rel="dialog">Purchase Report By Shop</a></li>
+					<li><a href="#" data-rel="dialog">Purchase Report Yearly</a></li>
+					<li><a href="#" data-rel="dialog">Purchase Report Supplier
+							Wise</a></li>
+					<li><a href="#" data-rel="dialog">Item Wise Purchase
+							Report</a></li>
+					<li><a href="#" data-rel="dialog">Supplier Wise Purchase
+							Report</a></li>
+					<li><a href="#" data-rel="dialog">Purchase Report</a></li>
+
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>Commission Report</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">DateWise Commission For
+							Employee</a></li>
+					<li><a href="#" data-rel="dialog">DayWise Employee
+							Commission</a></li>
+
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>Vat Report</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Shop1 Vat</a></li>
+					<li><a href="#" data-rel="dialog">Shop2 Vat</a></li>
+					<li><a href="#" data-rel="dialog">Shop3 Vat</a></li>
+					<li><a href="#" data-rel="dialog">Shop Wise Vat</a></li>
+
+				</ul>
+			</div>
+			<div data-role="collapsible" data-inset="false">
+				<h2>Barcode Detail</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Lion</a></li>
+
+				</ul>
+			</div>
+			<div data-role="collapsible" data-inset="false">
+				<h2>Day Closing Payments</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Lion</a></li>
+
+				</ul>
+			</div>
+			<div data-role="collapsible" data-inset="false">
+				<h2>All Return Bills</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Lion</a></li>
+
+				</ul>
+			</div>
+		</div>
+		<!-- /collapsible set -->
+	</div>
+	<!---------------------------------------------------------------------->
+	<div data-role="popup" id="popupNested9" data-theme="none">
+		<div data-role="collapsibleset" data-theme="b" data-content-theme="a"
+			data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d"
+			style="margin: 0; width: 250px;">
+			<div data-role="collapsible" data-inset="false">
+				<h2>CS Desk</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Temporary Stock </a></li>
+					<li><a href="#" data-rel="dialog">Temporary Stock Return</a></li>
+					<li><a href="#" data-rel="dialog">Temporary Stock Details</a></li>
+
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>Customer Feedback</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Shop related Reports</a></li>
+
+
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>Customer Feedback List</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Purchase Report Between
+							Two Days</a></li>
+					<li><a href="#" data-rel="dialog">Purchase Report By Shop</a></li>
+					<li><a href="#" data-rel="dialog">Purchase Report Yearly</a></li>
+					<li><a href="#" data-rel="dialog">Purchase Report Supplier
+							Wise</a></li>
+					<li><a href="#" data-rel="dialog">Item Wise Purchase
+							Report</a></li>
+					<li><a href="#" data-rel="dialog">Supplier Wise Purchase
+							Report</a></li>
+					<li><a href="#" data-rel="dialog">Purchase Report</a></li>
+
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>Loyalty Program</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">DateWise Commission For
+							Employee</a></li>
+					<li><a href="#" data-rel="dialog">DayWise Employee
+							Commission</a></li>
+
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>Loyalty Program List</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Shop1 Vat</a></li>
+
+
+				</ul>
+			</div>
+			<div data-role="collapsible" data-inset="false">
+				<h2>Card Point</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Lion</a></li>
+
+				</ul>
+			</div>
+			<div data-role="collapsible" data-inset="false">
+				<h2>Visitor</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Lion</a></li>
+
+				</ul>
+			</div>
+			<div data-role="collapsible" data-inset="false">
+				<h2>Visitor List</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Lion</a></li>
+
+				</ul>
+			</div>
+		</div>
+		<!-- /collapsible set -->
+	</div>
+	<!-------------------------------------------------------------------------------------------------->
+	<div data-role="popup" id="popupNested10" data-theme="none">
+		<div data-role="collapsibleset" data-theme="b" data-content-theme="a"
+			data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d"
+			style="margin: 0; width: 250px;">
+			<div data-role="collapsible" data-inset="false">
+				<h2>Birthday</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Temporary Stock </a></li>
+
+				</ul>
+			</div>
+			<!-- /collapsible -->
+			<div data-role="collapsible" data-inset="false">
+				<h2>Anniversary</h2>
+				<ul data-role="listview">
+					<li><a href="#" data-rel="dialog">Shop related Reports</a></li>
+
+
+				</ul>
+			</div>
+			<!-- /collapsible -->
+
+		</div>
+		<!-- /collapsible set -->
+	</div>
+
+
+	<!--
+<div data-role="popup" id="popupNested11" data-theme="none">
+    <div data-role="collapsibleset" data-theme="b" data-content-theme="a" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" style="margin:0; width:250px;">
+        <div data-role="collapsible" data-inset="false">
+        <h2>Create User</h2>
+            <ul data-role="listview">
+                <li><a href="#" data-rel="dialog">Temporary Stock </a></li>
+				
+            </ul>
+        </div>
+          
+    </div>
+</div>
+
+<div data-role="popup" id="popupNested12" data-theme="none">
+    <div data-role="collapsibleset" data-theme="b" data-content-theme="a" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" style="margin:0; width:250px;">
+        <div data-role="collapsible" data-inset="false">
+        <h2>Logout</h2>
+            <ul data-role="listview">
+                <li><a href="#" data-rel="dialog">Temporary Stock </a></li>
+				
+            </ul>
+        </div>
+       
+        
+    </div>
+</div>-->
+
+
+</body>
+
+
+</html>
+
+
+
+
+--%>

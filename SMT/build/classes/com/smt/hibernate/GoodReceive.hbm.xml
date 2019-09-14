@@ -1,0 +1,85 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.smt.hibernate.GoodReceive" table="goodreceive">
+
+		<id name="PkGoodRecId" type="java.lang.Long" column="PkGoodRecId">
+			<generator class="increment" />
+		</id>
+
+		<property name="supplierName" type="java.lang.Long" column="FksuppId" />
+
+		<property name="itemName" type="java.lang.String" column="ItemName" length="255" />
+
+		<property name="hsnsacno" type="java.lang.String" column="HsnSacNo" />
+
+		<property name="catName" type="java.lang.String" column="CategoryName" length="255" />
+
+		<property name="quantity" type="java.lang.Double" column="Quantity" />
+
+		<property name="oringnalQuantity" type="java.lang.Double" column="OrignalQuantity" />
+
+		<property name="buyPrice" type="java.lang.Double" column="BuyPrice" length="255" />
+
+		<property name="salePrice" type="java.lang.Double" column="SalePrice" length="255" />
+
+		<property name="total" type="java.lang.Double" column="Total" length="255" />
+
+		<property name="billNo" type="java.lang.String" column="BillNo" />
+
+		<property name="contactPerson" type="java.lang.String" column="ContactPerson" length="255" />
+
+		<property name="vat" type="java.lang.Double" column="Vat" length="255" />
+
+		<property name="igst" type="java.lang.Double" column="igst" length="255" />
+
+		<property name="taxAmount" type="java.lang.Double" column="TaxAmount" length="255" />
+
+		<property name="date" type="java.sql.Date" column="Date" length="255" />
+
+		<property name="expence" type="java.lang.Double" column="Expences" length="255" />
+
+		<property name="extraDiscount" type="java.lang.Double" column="ExtraDiscount" />
+
+		<property name="grossTotal" type="java.lang.Double" column="GrossTotal"/>
+
+		<property name="barcodeNo" type="java.lang.Long" column="BarcodeNo" />
+
+		<property name="color" type="java.lang.String" column="color" />
+
+		<property name="size" type="java.lang.String" column="size" />
+
+		<property name="pendingBillPayment" type="java.lang.Double"	column="pending_bill_payment" />
+
+		<property name="BarcodeQty" type="java.lang.Long" column="BarcodeQty" />
+		
+		<property name="rollSize" type="java.lang.Double" column="RollSize" />
+		
+		<property name="purcode" type="java.lang.String" column="PurchaseCode" />
+		
+		<property name="supCode" type="java.lang.String" column="supCode" />
+		
+		<property name="discount" type="java.lang.Double" column="Discount" />
+		
+		<property name="subCatId" type="java.lang.Long" column="fkSubCatId" />
+		
+		<property name="returnQuantity" type="java.lang.Double" column="returnQuantity" />
+		
+		<property name="spWithoutTax" type="java.lang.Double" column="salePWithoutTax" />
+		
+		<property name="disPerForBill" type="java.lang.Double" column="discountPerForBilling" />
+		
+		<property name="fkCatId" type="java.lang.Long" column="fkCatId" />
+		
+		<property name="fkProductId" type="java.lang.Long" column="fkProductId" />
+		
+		<property name="style" type="java.lang.String" column="style"/>
+		
+		<property name="voucherNo" type="java.lang.Long" column="voucherNo" />
+		
+		<property name="soldQuantity" type="java.lang.Double" column="soldQuantity"/>
+		
+	</class>
+</hibernate-mapping> 		 

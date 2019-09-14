@@ -1,0 +1,53 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.smt.hibernate.CustomerBill" table="CustomerBill">
+
+		<id name="pkBillId" type="java.lang.Long" column="pkBillId">
+			<generator class="increment" />
+		</id>
+
+		<property name="pkItemId" type="java.lang.Long" column="PkItemId" />
+
+		<property name="itemName" type="java.lang.String" column="ItemName" />
+
+		<property name="categoryName" type="java.lang.String" column="CategoryName" />
+
+		<property name="quantity" type="java.lang.Long" column="Quantity" />
+
+		<property name="salePrice" type="java.lang.Double" column="SalePrice" />
+
+		<property name="discount" type="java.lang.Double" column="Discount" />
+
+		<property name="totalAmt" type="java.lang.Double" column="TotalAmount" />
+
+		<property name="totalperItem" type="java.lang.Double" column="totalperitem" />
+
+		<property name="grossamt" type="java.lang.Double" column="GrossTotal" />
+
+		<property name="billNo" type="java.lang.Long" column="BillNo" />
+
+		<property name="vat" type="java.lang.Double" column="Gst" />
+
+		<property name="igst" type="java.lang.Double" column="Igst" />
+
+		<property name="taxAmount" type="java.lang.Double" column="TaxAmount" />
+
+		<property name="hsnSacNo" type="java.lang.String" column="HsnSacNo" />
+
+		<property name="ownerName" type="java.lang.String" column="OwnerName" />
+
+		<property name="carNo" type="java.lang.String" column="CarNo" />
+
+		<property name="contactNo" type="java.lang.Long" column="ContactNo" />
+
+		<property name="barcodeNo" type="java.lang.Long" column="BarcodeNo" />
+
+		<property name="current_date" type="java.sql.Date" column="Date" />
+		
+	
+
+	</class>
+</hibernate-mapping> 

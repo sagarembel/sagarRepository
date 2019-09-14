@@ -1,0 +1,77 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.smt.hibernate.PurchaseReturn" table="purchasereturn">
+
+		<id name="PkPurchaseReturnId" type="java.lang.Long" column="PkPurchaseReturnId">
+			<generator class="increment" />
+		</id>
+
+		<property name="supplierName" type="java.lang.String" column="supplierName" />
+
+		<property name="itemName" type="java.lang.String" column="ItemName"
+			length="255" />
+
+		<property name="catName" type="java.lang.String" column="CategoryName"
+			length="255" />
+
+		<property name="quantity" type="java.lang.Long" column="OrignalQuantity" />
+
+		<property name="oringnalQuantity" type="java.lang.Long"
+			column="ReturnQuantity" />
+
+		<property name="buyPrice" type="java.lang.Double" column="BuyPrice"
+			length="255" />
+
+		<property name="total" type="java.lang.Double" column="Total"
+			length="255" />
+
+		<property name="billNo" type="java.lang.Long" column="BillNo" />
+
+		<property name="contactPerson" type="java.lang.String"
+			column="ContactPerson" length="255" />
+
+		<property name="vat" type="java.lang.Double" column="Vat" length="255" />
+			
+		<property name="iGst" type="java.lang.Double" column="igst"	length="255" />
+		
+		<!-- <property name="vat" type="java.lang.Double" column="taxAmount" length="255" /> -->
+
+		<property name="date" type="java.sql.Date" column="PurchaseDate" length="255" />
+
+		<property name="grossTotal" type="java.lang.Double" column="GrossTotal"	length="255" />
+
+		<property name="barcodeNo" type="java.lang.Long" column="BarcodeNo" />
+
+		<property name="ondate" type="java.lang.String" column="ReturnDate" length="255" />
+
+		<property name="returnTotal" type="java.lang.Double" column="Return_Total" />
+
+		<property name="returnGrossTotal" type="java.lang.Double" column="Return_Gross_Total" />
+			
+		<property name="discount" type="java.lang.Double" column="discount" />
+			
+		<property name="rollSize" type="java.lang.Double" column="rollsize" />
+			
+			<property name="fkSupplierId" type="java.lang.Long" column="fkSuppId" />
+			
+			<property name="purchaseReturnReason" type="java.lang.String" column="purchaseReturnReason"	length="2000" />
+			
+			<property name="transactionId" type="java.lang.Long" column="transactionId" />
+			
+			<property name="size" type="java.lang.String" column="size"	length="255" />
+			
+			<property name="taxAmount" type="java.lang.Double" column="taxAmount" />
+	
+			<property name="disAmount" type="java.lang.Double" column="discountAmount" />
+			
+			<property name="productId" type="java.lang.Long" column="fkProductId" />
+			
+			<property name="subCatId" type="java.lang.Long" column="fkSubCatId" />
+			
+			<property name="catId" type="java.lang.Long" column="fkCatId" />
+
+	</class>
+</hibernate-mapping> 		 

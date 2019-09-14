@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+	<class name="com.smt.hibernate.CashBankBookDataDateWise" table="cashbankbooktable"
+		schema="fabric">
+
+		<id name="pkLastCashId" type="java.lang.Long" column="pkLastCashId">
+			<generator class="increment" />
+		</id>
+
+		<property name="totalAmount" type="java.lang.Double" column="totalAmount" />
+
+		<property name="date" type="java.lang.String" column="onDate" />
+
+	</class>
+</hibernate-mapping>

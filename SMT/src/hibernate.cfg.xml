@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- Database connection settings -->
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/fabric</property>
+		<!-- <property name="connection.url">jdbc:mysql://localhost:3306/cloth_client</property> -->
+		<property name="connection.username">root</property>
+		<property name="connection.password">root</property>
+
+		<property name="connection.pool_size">1</property>
+
+		<!-- SQL dialect -->
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+		<!-- Disable the second-level cache -->
+		<property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+
+		<!-- Echo all executed SQL to stdout -->
+		<property name="show_sql">true</property>
+
+		<mapping resource="com/smt/hibernate/Category.hbm.xml" />
+		<mapping resource="com/smt/hibernate/SupplierDetail.hbm.xml" />
+		<mapping resource="com/smt/hibernate/UserDetail.hbm.xml" />
+		<mapping resource="com/smt/hibernate/CarEntry.hbm.xml" />
+		<mapping resource="com/smt/hibernate/TempItemDetail.hbm.xml" />
+		<mapping resource="com/smt/hibernate/CustomerBill.hbm.xml" />
+		<mapping resource="com/smt/hibernate/ProductRegister.hbm.xml" />
+		<mapping resource="com/smt/hibernate/GoodReceive.hbm.xml" />
+		<mapping resource="com/smt/hibernate/Stock.hbm.xml" />
+		<mapping resource="com/smt/hibernate/CashBook.hbm.xml" />
+		<mapping resource="com/smt/hibernate/VatEntry.hbm.xml" />
+		<mapping resource="com/smt/hibernate/PurchaseReturn.hbm.xml" />
+		<mapping resource="com/smt/hibernate/SaleReturn.hbm.xml" />
+		<mapping resource="com/smt/hibernate/OtherBill.hbm.xml" />
+		<mapping resource="com/smt/hibernate/CustomerDetails.hbm.xml" />
+		<mapping resource="com/smt/hibernate/CustomerPayment.hbm.xml" />
+		<mapping resource="com/smt/hibernate/EmployeeDetails.hbm.xml" />
+		<mapping resource="com/smt/hibernate/EmployeePayment.hbm.xml" />
+		<mapping resource="com/smt/hibernate/ExpenditureDetails.hbm.xml" />
+		<mapping resource="com/smt/hibernate/ExpenditurePayment.hbm.xml" />
+		<mapping resource="com/smt/hibernate/SupplierPayment.hbm.xml" />
+		<mapping resource="com/smt/hibernate/CreditCustomerBill.hbm.xml" />
+		<mapping resource="com/smt/hibernate/SubCategory.hbm.xml" />
+		<mapping resource="com/smt/hibernate/CashBankBookDataDateWise.hbm.xml" />
+
+	</session-factory>
+
+</hibernate-configuration>

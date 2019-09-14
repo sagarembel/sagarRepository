@@ -1,0 +1,73 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.smt.hibernate.SaleReturn" table="salereturn">
+
+		<id name="pkBillId" type="java.lang.Long" column="PkSellReturnId">
+			<generator class="increment" />
+		</id>
+
+		<property name="itemName" type="java.lang.String" column="ItemName"	length="255" />
+
+		<property name="categoryName" type="java.lang.String" column="CategoryNane"	length="255" />
+
+		<property name="quantity" type="java.lang.Double" column="OrignalQuan" />
+
+		<property name="editQuantity" type="java.lang.Double" column="ReturnQuantuty" />
+
+		<property name="afterQuantity" type="java.lang.Double" column="AfterReturnQuantity" />
+
+		<property name="salePrice" type="java.lang.Double" column="SalePrice" length="255" />
+
+		<property name="discount" type="java.lang.Double" column="Discount" length="255" />
+
+		<property name="totalAmt" type="java.lang.Double" column="TotalAmount" length="255" />
+
+		<property name="grossamt" type="java.lang.Double" column="GrossAmount" length="255" />
+
+		<property name="billNo" type="java.lang.Long" column="BillNo" />
+
+		<property name="Date" type="java.sql.Date" column="BillReturnDate"	length="255" />
+
+		<property name="carNo" type="java.lang.String" column="CarNo" length="255" />
+
+		<property name="contactNo" type="java.lang.Long" column="ContactNo" />
+
+		<property name="barcodeNo" type="java.lang.Long" column="BarcodeNo" />
+
+		<property name="current_date" type="java.sql.Date" column="BillGenerateDate" length="255" />
+
+		<property name="returnTotal" type="java.lang.Double" column="Return_Total" />
+
+		<property name="customerName" type="java.lang.String" column="Customer_Name" />
+
+		<property name="type" type="java.lang.String" column="Customer_Type" />
+		
+		<property name="fkCreditCustId" type="java.lang.Long" column="fkCreditCustId" />
+		
+		<property name="transactionId" type="java.lang.Long" column="transactionId" />
+		
+		<property name="gst" type="java.lang.Double" column="gst" />
+			
+		<property name="iGst" type="java.lang.Double" column="iGst"	/>
+			
+		<property name="taxAmount" type="java.lang.Double" column="taxAmount" />
+		
+		<property name="returnReason" type="java.lang.String" column="Reason" />
+		
+		<property name="productId" type="java.lang.Long" column="productId" />
+		
+		<property name="subCatId" type="java.lang.Long" column="subCatId" />
+		
+		<property name="catId" type="java.lang.Long" column="catId" />
+		
+		<property name="userType" type="java.lang.String" column="userType" />
+		
+		<property name="FkUserId" type="java.lang.Long" column="FkUserId" />
+		
+		<property name="redeemedForBillNo" type="java.lang.Long" column="redeemedForBillNo" />
+
+	</class>
+</hibernate-mapping> 

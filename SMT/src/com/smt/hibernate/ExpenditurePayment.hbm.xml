@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+	<class name="com.smt.hibernate.ExpenditurePaymentBean" table="expenditure_payment"
+		schema="fabric">
+
+		<id name="pkExpPaymentId" type="java.lang.Long" column="pk_expenditure_payment_id">
+			<generator class="increment" />
+		</id>
+
+		<property name="fkExpDetailId" type="java.lang.Long" column="fk_expense_detail_id" not-null="true" update="false" length="20" />
+
+		<property name="serviceProvider" type="java.lang.String" column="service_provide" not-null="true" length="128" />
+
+		<property name="accountantName" type="java.lang.String"	column="accountant_name" not-null="true" length="128" />
+
+		<property name="paymentType" type="java.lang.String" column="paymentType" length="20" />
+
+		<property name="crDbAmount" type="java.lang.Double" column="payment" length="20" />
+
+		<property name="totalAmount" type="java.lang.Double" column="total_amount" not-null="true" length="20" />
+
+		<property name="contactNumber" type="java.lang.Long" column="contact_number" length="20" />
+
+		<property name="insertDate" type="java.sql.Date" column="insert_date" />
+
+		<!-- ORM Mapping -->
+		<!-- <many-to-one name="expenditureDetailsBean"
+			class="com.smt.hibernate.ExpenditureDetailsBean" not-null="true"
+			cascade="all">
+			<column name="fk_expense_detail_id" />
+		</many-to-one> -->
+
+	</class>
+</hibernate-mapping>

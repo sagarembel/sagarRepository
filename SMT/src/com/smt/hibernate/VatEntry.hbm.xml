@@ -1,0 +1,23 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+
+	<class name="com.smt.hibernate.VatEntry" table="vat_entry">
+
+		<id name="vatPkId" type="java.lang.Long" column="pk_vat_id">
+			<generator class="increment" />
+		</id>
+
+		<property name="vatName" type="java.lang.String" column="vat_name" />
+
+		<property name="vatPercentage" type="java.lang.Double" column="vat_percentage" />
+		
+		<property name="startPrice" type="java.lang.Double" column="start_Price" />
+		
+		<property name="endPrice" type="java.lang.Double" column="end_Price" />
+		
+
+	</class>
+</hibernate-mapping> 

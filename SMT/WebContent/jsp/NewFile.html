@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="/SMT/staticContent/y_js/jquery-1.12.3.min.js"></script>
+<script src="/SMT/staticContent/y_css/adi.css"></script>
+<link href="/SMT/staticContent/js/table2excel.js" rel="stylesheet" />
+<style type="text/css">
+body {
+	font-family: Arial;
+	font-size: 10pt;
+}
+
+table {
+	border: 1px solid #ccc;
+	border-collapse: collapse;
+}
+
+table th {
+	background-color: #F7F7F7;
+	color: #333;
+	font-weight: bold;
+}
+
+table th, table td {
+	padding: 5px;
+	border: 1px solid #ccc;
+}
+</style>
+</head>
+<body>
+
+	<div class="back">
+		<table border="0" id="tblCustomers" cellspacing="0" cellpadding="0">
+			<tr>
+				<td><select size="1">
+						<option>one</option>
+						<option>two</option>
+						<option>duck</option>
+				</select></td>
+
+				<td><select size="1">
+						<option>one</option>
+						<option>two</option>
+				</select></td>
+
+
+				<td><select size="1">
+						<option>one</option>
+						<option>two</option>
+						<option>monitor</option>
+				</select></td>
+			</tr>
+		</table>
+	</div>
+	<input type="button" id="btnExport" value="Export" />
+</body>
+<script type="text/javascript">
+        $(function () {
+           /*  $("#btnExport").click(function () {
+                $("#tblCustomers").table2excel({
+                    filename: "Table.xls"
+                });
+            }); */
+        	$("#btnExport").click(function (e) {
+        	    window.open('data:application/vnd.ms-excel,' + $('#tblCustomers').html());
+        	    e.preventDefault();
+        	});
+        });
+    </script>
+</html>

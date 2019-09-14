@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+	<class name="com.smt.hibernate.CustomerDetailsBean" table="customer_details"
+		schema="fabric">
+
+		<id name="custId" type="java.lang.Long" column="pk_customer_id">
+			<generator class="increment" />
+		</id>
+
+		<property name="firstName" type="java.lang.String" column="first_name"
+			not-null="true" length="128" />
+
+		<property name="middleName" type="java.lang.String" column="middle_name"
+			not-null="true" length="128" />
+
+		<property name="lastName" type="java.lang.String" column="last_name"
+			not-null="true" length="128" />
+
+		<property name="address" type="java.lang.String" column="address"
+			not-null="true" length="128" />
+
+		<property name="contactNo" type="java.lang.Long" column="contact_no"
+			not-null="true" length="20" />
+
+		<property name="aadhar" type="java.lang.String" column="aadhar_no"
+			length="20" />
+
+		<property name="emailId" type="java.lang.String" column="email_id"
+			length="128" />
+
+		<property name="zipCode" type="java.lang.Long" column="pin_code"
+			not-null="true" length="20">
+		</property>
+
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,141 @@
+body { 	
+		
+		background-position: fill;
+		background-attachment: fixed;
+		color 		: Navy; 
+		font-size	: 15px;
+		font-family : Tahoma;
+		
+		
+	}
+
+.adiy{
+	 position: absolute;
+     height: 100%;
+	 width:100%;
+	 background-image: url(6.jpg); 
+     opacity:0.5;
+}
+
+.modal-body {
+	background-color: darkgray;
+	padding:30px 40px;
+	
+}
+	
+.shree{
+	opacity:0.8;
+	
+}
+	
+.header {
+	text-align: center;
+	font-family: "Times New Roman";
+	font-size: 20px;
+	background-image: url(E:\OFFICE\login\6.jpg); 
+    opacity:0.8;
+}
+
+h2 {
+	color:red;
+	font-size: 50px;
+}
+	
+.date-field {
+	text-align: right;
+	padding-bottom:20px;
+}
+
+
+
+input[type="text"] {
+    height: 35px;
+}
+
+.form-group {
+	padding-bottom: 1cm;
+	padding-top: 40px;
+	font-family: "Times New Roman";
+	font-size: 20px;
+	
+}
+
+.form-group-1 {
+	padding: 30px;
+	text-align: center;
+	font-family: "Times New Roman";
+	font-size: 20px;
+	
+}
+	
+.rTable {
+   	display: table;
+	width: 100%;
+	padding: 20px;
+	font-size: 20px;
+	
+}
+.rTableRow {
+   	display: table-row;
+	font-family: "Times New Roman";
+	font-size: 20px;
+	
+}
+
+.rTableLabel{
+	font-size: 20px;
+	text-align: right;
+	font-family: "Times New Roman";
+	font-size: 20px;
+}
+
+.rTableHeading {
+	display: table-header-group;
+	background-color: #ddd;
+}
+
+.rTableCell, .rTableHead {
+ 	display: table-cell;
+   	padding: 10px 10px;
+   	border: 1px solid #999999;
+}
+
+
+
+.rTableHeading {
+   	display: table-header-group;
+   	background-color: #ddd;
+   	font-weight: bold;
+}
+	
+.rTableBody {
+   	display: table-row-group;
+}
+	
+.wrapper{
+	text-align: center;
+	padding-top: 50px;
+	font-family: "Times New Roman";
+	font-size: 15px;	
+		
+}
+
+.btn {
+	text-align: left;
+	font-size: 15px;
+	margin: 4px 10px;
+	padding: 2px 7px;
+	display: inline-block;
+	
+}
+		
+.footer {
+	text-align: right;
+    height: 60px;
+    padding-top: 30px;
+    display: block;
+    position: relative;
+    width: 100%;
+	font-family: "Times New Roman";
+	font-size: 15px;
+}

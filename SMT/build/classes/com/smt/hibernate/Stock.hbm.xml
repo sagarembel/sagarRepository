@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+	<class name="com.smt.hibernate.Stock" table="stock_details"
+		schema="fabric">
+
+		<id name="PkStockId" type="java.lang.Long" column="pk_stock_details_id">
+			<generator class="increment" />
+		</id>
+
+		<property name="itemName" type="java.lang.String" column="ItemName" not-null="true" />
+
+		<property name="catName" type="java.lang.String" column="CategoryName" not-null="true" />
+
+		<property name="quantity" type="java.lang.Double" column="Quantity"	length="20" />
+
+		<property name="UpdateDate" type="java.sql.Date" column="UpdateDate" length="19" />
+		
+		<property name="fkCategoryId" type="java.lang.Long" column="fk_Cat_Id" length="20"/>
+		
+		<property name="fkProductId" type="java.lang.Long" column="fk_Product_Id" length="20"/>
+
+	</class>
+</hibernate-mapping>

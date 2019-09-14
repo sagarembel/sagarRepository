@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+	<class name="com.smt.hibernate.SubCategory" table="sub_categories">
+
+		<id name="pkSubcatId" type="java.lang.Long" column="pk_subcat_id">
+			<generator class="increment" />
+		</id>
+
+		<property name="fkRootcatId" type="java.lang.Long" column="fk_rootcat_id"
+			insert="false" update="false" length="19" />
+
+		<property name="subcatName" type="java.lang.String" column="subcat_name"
+			not-null="true" length="128" />
+
+		<!-- Associations -->
+
+		<many-to-one name="category" class="com.smt.hibernate.Category"
+			not-null="true" cascade="all">
+			<column name="fk_rootcat_id" />
+
+		</many-to-one>
+	</class>
+</hibernate-mapping>

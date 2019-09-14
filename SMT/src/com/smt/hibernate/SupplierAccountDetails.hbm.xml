@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+	<class name="com.smt.hibernate.SupplierAccountDetailsBean" table="supplier_account_details"
+		schema="fabric">
+
+		<id name="pkSupplierAccDetailsId" type="java.lang.Long" column="pk_supplier_acc_details">
+			<generator class="increment" />
+		</id>
+
+		<property name="fk_supplier_id" type="java.lang.Long" column="fk_supplier_id"
+			not-null="true" update="false" insert="false" length="20">
+		</property>
+
+		<property name="billNo" type="java.lang.Long" column="bill_no"
+			not-null="true" length="20">
+		</property>
+
+		<property name="totalAmt" type="java.lang.Double" column="total_amount"
+			not-null="true" length="128">
+		</property>
+
+		<property name="insertDate" type="java.sql.Date" column="insert_date"
+			not-null="true" length="10" />
+
+		<many-to-one name="SupplierDetailsBean"
+			class="com.Fertilizer.hibernate.SupplierDetailsBean" not-null="true"
+			cascade="all">
+			<column name="fk_supplier_id" />
+		</many-to-one>
+
+	</class>
+</hibernate-mapping>

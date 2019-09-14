@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+	<class name="com.smt.hibernate.EmployeeDetailsBean" table="employee_details"
+		schema="fabric">
+
+		<id name="empId" type="java.lang.Long" column="pk_empoyee_id">
+			<generator class="increment" />
+		</id>
+
+		<property name="firstName" type="java.lang.String" column="first_name"
+			not-null="true" length="128" />
+
+		<property name="middleName" type="java.lang.String" column="middle_name"
+			not-null="true" length="128" />
+
+		<property name="lastName" type="java.lang.String" column="last_name"
+			not-null="true" length="128" />
+
+		<property name="joiningDate" type="java.util.Date" column="joining_date"
+			not-null="true" />
+
+		<property name="salary" type="java.lang.Double" column="salary"
+			not-null="true" length="10" />
+
+		<property name="address" type="java.lang.String" column="address"
+			not-null="true" length="128" />
+
+		<property name="contactNo" type="java.lang.Long" column="contact_no"
+			not-null="true" length="20" />
+
+		<property name="zipCode" type="java.lang.Long" column="pin_code" />
+
+		<property name="emailId" type="java.lang.String" column="email_id"
+			not-null="true" length="128" />
+			
+		<property name="resignDate" type="java.util.Date" column="resignDate"/>
+			
+
+	</class>
+</hibernate-mapping>

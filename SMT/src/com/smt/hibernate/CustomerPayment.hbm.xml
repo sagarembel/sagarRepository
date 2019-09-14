@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.smt.hibernate.CustomerPaymentBean" table="credit_customer_payment" schema="fabric">
+
+		<id name="pkCustPaymentId" type="java.lang.Long" column="pk_credit_customer_id"> <generator class="increment" /> </id>
+
+		<property name="customer" type="java.lang.Long" column="fk_customer_id"	length="20" />
+
+		<!-- <property name="billNo" type="java.lang.Long" column="bill_no" length="20" /> -->
+
+		<property name="chequeNum" type="java.lang.String" column="cheque_num" length="20" />
+
+		<property name="cardNum" type="java.lang.Long" column="card_num" length="20" />
+
+		<property name="accNum" type="java.lang.Long" column="acc_num" length="20" />
+
+		<property name="paymentMode" type="java.lang.String" column="payment_mode" length="20" />
+
+		<property name="personname" type="java.lang.String" column="person_name" length="128" />
+
+		<property name="nameOnCheck" type="java.lang.String" column="name_on_check" length="128" />
+
+		<property name="bankName" type="java.lang.String" column="bank_name" length="128" />
+
+		<property name="paymentType" type="java.lang.String" column="paymentType" length="128" />
+
+		<property name="totalAmount" type="java.lang.Double" column="total_amount" length="20" />
+
+		<property name="balance" type="java.lang.Double" column="balance" length="20" />
+
+		<property name="credit" type="java.lang.Double" column="payment" length="20" />
+
+		<property name="insertDate" type="java.util.Date" column="insert_date" />
+
+		<property name="returnAmount" type="java.lang.Double" column="returnAmount" length="20" />
+			
+		<property name="description" type="java.lang.String" column="description" length="2000" />
+			
+		<property name="receiptNo" type="java.lang.String" column="receiptNo" length="128" />
+
+	</class>
+</hibernate-mapping>
